@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>គ្រប់គ្រងកម្ចីខ្នាតតូច — Daily Micro-Loan Manager KHR</title>
+    <meta name="description" content="Mobile-first Progressive Web App for managing daily (21/22-day) and monthly flat-rate micro-loans in Khmer Riel (KHR) with repayment schedules, collections, and Profit & Loss tracking." />
+    <meta property="og:title" content="គ្រប់គ្រងកម្ចីខ្នាតតូច — Daily Micro-Loan Manager KHR" />
+    <meta property="og:description" content="Manage daily (21/22-day) and monthly flat-rate micro-loans in Khmer Riel (KHR) with automated schedules and Profit & Loss reports." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- PWA & Mobile Meta Tags -->
+    <meta name="theme-color" content="#020617" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MFILoans" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+
+    <!-- Google Font: Content (Khmer OS Content compatible) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Content:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-900 text-slate-100 antialiased selection:bg-emerald-500 selection:text-slate-950">
+    <div id="root"></div>
+    <script>
+      // Gracefully ignore benign Vite HMR WebSocket errors in sandbox preview environments
+      const _origError = console.error;
+      console.error = function (...args) {
+        if (typeof args[0] === 'string' && (args[0].includes('WebSocket closed without opened') || args[0].includes('[vite] Error: WebSocket'))) {
+          return;
+        }
+        _origError.apply(console, args);
+      };
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

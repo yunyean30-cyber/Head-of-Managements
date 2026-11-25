@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  .khmer-content-root,
+  .khmer-content-root *,
+  .khmer-content-root *::before,
+  .khmer-content-root *::after,
+  .khmer-content-root input,
+  .khmer-content-root select,
+  .khmer-content-root textarea,
+  .khmer-content-root button,
+  .khmer-content-root table,
+  .khmer-content-root th,
+  .khmer-content-root td {
+    font-family: 'Khmer OS Content', 'Content', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #schedule-print-area,
+  #schedule-print-area * {
+    visibility: visible;
+    color: #0f172a !important;
+    background: transparent !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  #schedule-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

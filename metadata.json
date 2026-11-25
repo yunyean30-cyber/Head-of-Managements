@@ -1,0 +1,6 @@
+{
+  "name": "MFI Daily KHR Loans",
+  "description": "Mobile-first Progressive Web App for managing 21 and 22-day flat-rate daily micro-loans denominated in Khmer Riel (KHR) with one-tap collection, automated amortization, and Telegram notifications.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
